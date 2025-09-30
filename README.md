@@ -86,3 +86,29 @@ Then start the client in another terminal:
 python -m src.client
 ```
 Communication will happen over TCP sockets.
+
+
+### 🔍 Vulnerability Checks
+All vulnerability scripts rely on src/core.py + src/models.py.
+
+SQL Injection check:
+```bash
+python -m src.vulnerabilities.sqli "https://example.com/?id=1"
+```
+
+XSS check:
+```bash
+python -m src.vulnerabilities.xss "https://example.com/?q=test"
+```
+
+
+Open Ports:
+```bash
+python -m src.vulnerabilities.ports example.com 80 443 8080
+```
+
+### 🌀 Fuzzing
+Run the fuzzing tool against a target:
+```bash
+python -m tools.fuzzing --target https://example.com --payloads data/fuzzing.txt
+```
