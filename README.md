@@ -112,3 +112,13 @@ Run the fuzzing tool against a target:
 ```bash
 python -m tools.fuzzing --target https://example.com --payloads data/fuzzing.txt
 ```
+
+---
+## 📦 Data Files
+
+- fuzzing.txt → List of fuzzing payloads
+- ip.txt → IP addresses for scanning
+- log.txt → Example logs
+- usom.txt → Blocklist (sample data from USOM)
+
+---
